@@ -40,8 +40,10 @@ html,body{
     float: right;
 }
 #box{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
     box-sizing: border-box;
     position: absolute;
     left: 50%;
@@ -100,13 +102,20 @@ canvas{
     position: absolute;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-
-    background: rgba(111, 0, 255, 0.4);
+    background: rgba(2, 45, 102, 0.4);
     display: grid;
     z-index: 100;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    
+}
+#start > div{
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }
 #win{
     top: 0;
@@ -116,8 +125,11 @@ canvas{
     position: absolute;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    background: rgba(28, 7, 212, .8);
+    background: rgba(2, 45, 102, 0.4);
     z-index: -1;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: center;
 }
 #nowin{
     color: #fff;
@@ -152,6 +164,7 @@ canvas{
     font-family: sans-serif;
     text-align: center;
     font-size: 30px;
+    margin: 10px 0;
 }
 input::placeholder{
     color: rgb(216, 202, 202);
@@ -171,8 +184,7 @@ input::placeholder{
     font-family: sans-serif;
 }
 #win .block{
-    max-width: 400px;
-    width: 100%;
+    width: auto;
     height: 200px;
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
@@ -216,13 +228,9 @@ input::placeholder{
 }
 
 @media(max-width: 700px){
-    #start{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto 1fr;
-    }
     #win .block{
-        grid-template-columns: auto auto auto;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         grid-gap: 30px;
     }
     #win button{

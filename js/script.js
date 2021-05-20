@@ -43,8 +43,8 @@ class Area {
             player_2_item.value = "";
             p1_count.innerHTML = 0;
             p2_count.innerHTML = 0;
-            start.style.animationName = "win";
             win.style.animationName = "clear";
+            start.style.animationName = "win";
             document.querySelector(".p1").innerHTML = "";
             document.querySelector(".p2").innerHTML = "";
             new Area;
@@ -71,17 +71,6 @@ class Area {
     }
     win() {
         const board = this.board;
-        let y;
-        board.map(e => {
-            e.map(k => {
-                if(k != ""){
-                    y = true;
-                }else{
-                    y = false;
-                }
-            })
-        })
-        console.log(y);
         if ((board[0][0] == "x" && board[0][1] == "x" && board[0][2] == "x") ||
             (board[1][0] == "x" && board[1][1] == "x" && board[1][2] == "x") ||
             (board[2][0] == "x" && board[2][1] == "x" && board[2][2] == "x") ||
