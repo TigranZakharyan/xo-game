@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="box"></div>
+            <p class="p1"></p>
+            <p class="p2"></p>
+        </div>
+    </div>
+    <div id="start">
+        <div id="player_1">
+            <input type="text" placeholder="Player 1" id="player_1_item">
+        </div>
+        <button class="start_btn"><img src="img/game.svg" alt=""></button>
+        <div id="player_2">
+            <input type="text" placeholder="Player 2" id="player_2_item">
+        </div>
+    </div>
+    <div id="win">
+        <div id="count">
+            <p id="p1_count">0</p>
+            <p>-</p>
+            <p id="p2_count">0</p>
+        </div>
+        <div id="nowin"></div>
+        <div class="block">
+            <div id="player1_nick"></div>
+            <button class="start_btn"><img src="img/game.svg" alt=""></button>
+            <button class="restart_btn"><img src="img/res.svg" alt=""></button>
+            <div id="player2_nick"></div>
+        </div>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
